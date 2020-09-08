@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Update employee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+	<h3>Update employee</h3>
+	<form th:action="@{/updated/} + ${employee.id}" th:object="${employee}" method="post">
+	   	<p>Name: <input type="text" th:field="*{name}" /></p>
+	    <p>Job: 
+	    	<select th:field="*{job}">
+		    	<option th:value="'EMPLOYEE'" th:text="Employee"></option>
+		    	<option th:value="'SUPERVISOR'" th:text="Supervisor"></option>
+		    	<option th:value="'MANAGER'" th:text="Manager"></option>
+		    	<option th:value="'DIRECTOR'" th:text="Director"></option>
+			</select>
+		</p>
+		<br>
+		<input type="submit" th:value="Save">
+    </form>    
+</body>
+</html>

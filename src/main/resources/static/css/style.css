@@ -1,0 +1,70 @@
+body{
+  width: 100%;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: SteelBlue;
+  color: White;
+  font-weight: bold;
+}
+
+h3{
+  margin-top: 60px;
+}
+
+p{
+  margin-top: 40px;
+  font-size: 16px;
+ }
+
+input, select{
+  width: 120px;
+  padding:5px;
+  color: SteelBlue;
+  font-size: 16px;
+  font-weight: bold;
+  
+}
+
+td a:link , td a:visited {
+  text-decoration: none;
+  color: White;
+}
+
+td a:hover {
+  color: DeepSkyBlue;
+}
+
+td a:active {
+  color: Cyan;
+}
+
+button, .button{
+  margin-top: 40px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: SteelBlue;
+  text-decoration:none;
+  background-color: White;
+}
+
+table {
+	width: 50%;
+  	margin: auto;
+    border: solid 2px #FFFFFF;
+    
+}
+thead th {
+    background-color: white;
+    border: solid 1px white;
+    color: SteelBlue;
+    padding: 10px;
+    text-align: center;
+
+}
+tbody td {
+    border: solid 1px white;
+    color: white;
+    padding: 10px;
+}

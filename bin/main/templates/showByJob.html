@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Delete Employee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+	<h3 th:text="${job}+'S'"></h3>
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Job</th>
+				<th>Salary</th>
+				<th>View</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="employee: ${group}">
+				<td th:text="${employee.id}"></td>
+				<td th:text="${employee.name}"></td>
+				<td th:text="${employee.job}"></td>
+				<td th:text="${employee.salary}+' €'"></td>			
+				<td><a th:href="@{/employee/} + ${employee.id}" th:text="'&#8981'" ></a></td>
+				<td><a th:href="@{/update/} + ${employee.id}" th:text="'&#9998'" ></a></td>
+				<td><a th:href="@{/delete/} + ${employee.id}" th:text="'&#10006'" ></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<br><br>
+    <p><a class="button" href="/staff">Show employees</a></p>
+    <br>
+	<p><a class="button" href="/new">Add new employee</a></p>
+		
+</body>
+</html>
